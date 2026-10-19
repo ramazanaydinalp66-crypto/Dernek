@@ -41,7 +41,7 @@
             overflow: hidden;
         }
         
-        /* Slider Arka Plan Resimleri (Daha net ve görünür) */
+        /* Slider Arka Plan Resimleri */
         .hero-bg {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -55,12 +55,12 @@
             opacity: 1;
         }
 
-        /* Karartma Katmanı (Daha hafifletildi, fotoğraflar net görünür) */
+        /* Karartma Katmanı */
         .hero::before {
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(10, 45, 75, 0.45), rgba(0, 0, 0, 0.50));
+            background: linear-gradient(rgba(15, 76, 129, 0.70), rgba(0, 0, 0, 0.75));
             z-index: -1;
         }
 
@@ -78,8 +78,8 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             text-align: center;
         }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 0.8rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); font-weight: 700; }
-        .hero p { font-size: 1rem; max-width: 750px; margin-bottom: 2rem; opacity: 0.98; font-weight: 300; text-shadow: 1px 1px 6px rgba(0,0,0,0.8); padding: 0 10px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 0.8rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.6); font-weight: 700; }
+        .hero p { font-size: 1rem; max-width: 750px; margin-bottom: 2rem; opacity: 0.95; font-weight: 300; text-shadow: 1px 1px 5px rgba(0,0,0,0.5); padding: 0 10px; }
         .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; width: 100%; }
         
         .btn { padding: 0.8rem 1.8rem; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 8px; }
@@ -175,8 +175,9 @@
         </ul>
     </nav>
 
-    <!-- 3 Saniyede Bir Dönen ve Daha Net Arka Plan Fotoğraflı Karşılama Ekranı -->
+    <!-- 3 Saniyede Bir Dönen Arka Plan Fotoğraflı Karşılama Ekranı -->
     <header class="hero">
+        <!-- Slider Arka Plan Katmanları (3 Fotoğraf) -->
         <div class="hero-bg active" style="background-image: url('Gumusluk1.jpeg');"></div>
         <div class="hero-bg" style="background-image: url('Gumusluk3.jpeg');"></div>
         <div class="hero-bg" style="background-image: url('Gumusluk4.jpg');"></div>
