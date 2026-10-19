@@ -32,11 +32,11 @@
         .btn-donate-nav { background: var(--accent); color: white !important; padding: 0.5rem 1rem; border-radius: 20px; transition: 0.3s !important; }
         .btn-donate-nav:hover { background: #e08e0b; }
 
-        /* Yeni Fotoğrafla Karşılama Ekranı (Hero) - Mobil Uyumlu */
+        /* Karşılama Ekranı (Hero) - Mobil Uyumlu */
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(15, 76, 129, 0.70), rgba(0, 0, 0, 0.75)), 
-                        url('Gumusluk3.jpeg') center/cover no-repeat;
+                        url('image_790af8.jpg') center/cover no-repeat;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             text-align: center; color: white; padding: 0 1rem;
         }
@@ -128,8 +128,9 @@
         #iletisim div { font-size: 1rem !important; word-break: break-word; padding: 0 10px; }
         footer { background: var(--dark); color: white; text-align: center; padding: 1.5rem 1rem; margin-top: 3rem; font-size: 0.9rem; }
 
+        /* Medya Sorguları (Responsiveness için özel ayarlar) */
         @media (max-width: 768px) {
-            .nav-links { display: none; }
+            .nav-links { display: none; } /* Mobil cihazlar için sadeleştirilmiş görünüm */
             .hero h1 { font-size: 2.1rem; }
             .hero p { font-size: 0.95rem; }
             section { padding: 3rem 4%; }
@@ -151,7 +152,7 @@
         </ul>
     </nav>
 
-    <!-- Yeni Fotoğraflı ve "Hoş Geldiniz" Karşılama Ekranı -->
+    <!-- Giriş Boydan Fotoğraflı ve "Hoş Geldiniz" Karşılama Ekranı -->
     <header class="hero">
         <div class="hero-badge">
             <i class="fa-solid fa-house-chimney"></i> Gümüşlük İlim Kültür ve Eğitime Yardım Derneği
