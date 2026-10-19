@@ -32,38 +32,14 @@
         .btn-donate-nav { background: var(--accent); color: white !important; padding: 0.5rem 1rem; border-radius: 20px; transition: 0.3s !important; }
         .btn-donate-nav:hover { background: #e08e0b; }
 
-        /* Karşılama Ekranı (Hero) & Slider Arka Planı */
+        /* Yeni Fotoğrafla Karşılama Ekranı (Hero) - Mobil Uyumlu */
         .hero {
             height: 100vh;
-            position: relative;
+            background: linear-gradient(rgba(15, 76, 129, 0.70), rgba(0, 0, 0, 0.75)), 
+                        url('Gumusluk3.jpeg') center/cover no-repeat;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             text-align: center; color: white; padding: 0 1rem;
-            overflow: hidden;
         }
-        
-        /* Slider Arka Plan Resimleri */
-        .hero-bg {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-size: cover;
-            background-position: center;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            z-index: -2;
-        }
-        .hero-bg.active {
-            opacity: 1;
-        }
-
-        /* Karartma Katmanı */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(rgba(15, 76, 129, 0.70), rgba(0, 0, 0, 0.75));
-            z-index: -1;
-        }
-
         .hero-badge {
             background: rgba(243, 156, 18, 0.95);
             color: white;
@@ -175,13 +151,8 @@
         </ul>
     </nav>
 
-    <!-- 3 Saniyede Bir Dönen Arka Plan Fotoğraflı Karşılama Ekranı -->
+    <!-- Yeni Fotoğraflı ve "Hoş Geldiniz" Karşılama Ekranı -->
     <header class="hero">
-        <!-- Slider Arka Plan Katmanları (3 Fotoğraf) -->
-        <div class="hero-bg active" style="background-image: url('Gumusluk1.jpeg');"></div>
-        <div class="hero-bg" style="background-image: url('Gumusluk3.jpeg');"></div>
-        <div class="hero-bg" style="background-image: url('Gumusluk4.jpg');"></div>
-
         <div class="hero-badge">
             <i class="fa-solid fa-house-chimney"></i> Gümüşlük İlim Kültür ve Eğitime Yardım Derneği
         </div>
@@ -293,22 +264,8 @@
         <p>&copy; 2026 Gümüşlük Öğrenci Yurdu - Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <!-- JavaScript Fonksiyonları (Slider ve Kopyalama) -->
+    <!-- JavaScript Kopyalama Fonksiyonları -->
     <script>
-        // 3 Saniyede Bir Arka Plan Fotoğrafını Değiştiren Slider Kodu
-        let currentBgIndex = 0;
-        const bgSlides = document.querySelectorAll('.hero-bg');
-        
-        function changeBackgroundSlide() {
-            bgSlides[currentBgIndex].classList.remove('active');
-            currentBgIndex = (currentBgIndex + 1) % bgSlides.length;
-            bgSlides[currentBgIndex].classList.add('active');
-        }
-        
-        // Her 3 saniyede bir tetikle
-        setInterval(changeBackgroundSlide, 3000);
-
-        // Kopyalama Fonksiyonları
         function copyAssocName() {
             const name = document.getElementById('assocName').innerText;
             navigator.clipboard.writeText(name).then(() => {
